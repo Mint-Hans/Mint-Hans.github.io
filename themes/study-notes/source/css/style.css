@@ -1,0 +1,283 @@
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --text: #17202a;
+  --muted: #667085;
+  --line: #d9e0e8;
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --green: #0f766e;
+  --code-bg: #101828;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  line-height: 1.75;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-strong);
+}
+
+.wrap {
+  width: min(100% - 32px, 960px);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(247, 248, 250, 0.92);
+  backdrop-filter: blur(16px);
+}
+
+.header-inner {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-title {
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.site-main {
+  padding: 48px 0 72px;
+}
+
+.intro {
+  margin-bottom: 34px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow,
+.article-header time,
+.post-card time {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.intro h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.22;
+}
+
+.intro p:last-child {
+  max-width: 720px;
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
+.post-list {
+  display: grid;
+  gap: 18px;
+}
+
+.post-card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.post-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.post-card h2 a {
+  color: var(--text);
+}
+
+.excerpt {
+  color: var(--muted);
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.article,
+.archive {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.article-header {
+  margin-bottom: 26px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-header h1,
+.archive h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.28;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.tags a {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.article-content p,
+.article-content ul,
+.article-content ol {
+  margin: 0 0 1.1em;
+}
+
+.article-content h2,
+.article-content h3 {
+  margin: 1.6em 0 0.7em;
+  line-height: 1.35;
+}
+
+.article-content blockquote {
+  margin: 1.4em 0;
+  padding: 0 0 0 18px;
+  border-left: 4px solid var(--accent);
+  color: var(--muted);
+}
+
+.article-content code {
+  padding: 0.12em 0.35em;
+  border-radius: 4px;
+  background: #e8edf5;
+  font-family: Consolas, "SFMono-Regular", monospace;
+}
+
+.article-content pre {
+  overflow-x: auto;
+  padding: 18px;
+  border-radius: 8px;
+  background: var(--code-bg);
+  color: #eef2ff;
+}
+
+.article-content pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.archive h2 {
+  margin: 28px 0 10px;
+  font-size: 1.25rem;
+}
+
+.archive-list {
+  display: grid;
+  gap: 8px;
+}
+
+.archive-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+}
+
+.archive-item time {
+  color: var(--muted);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media (max-width: 680px) {
+  .header-inner,
+  .site-footer .wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 0;
+  }
+
+  .site-main {
+    padding-top: 32px;
+  }
+
+  .intro h1,
+  .article-header h1,
+  .archive h1 {
+    font-size: 1.65rem;
+  }
+
+  .article,
+  .archive,
+  .post-card {
+    padding: 20px;
+  }
+
+  .archive-item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

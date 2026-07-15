@@ -1,0 +1,18 @@
+<section class="intro">
+  <p class="eyebrow"><%= config.subtitle %></p>
+  <h1>把学习过程写成可以回看的成长轨迹。</h1>
+  <p><%= config.description %></p>
+</section>
+
+<section class="post-list" aria-label="文章列表">
+  <% page.posts.each(function(post) { %>
+    <article class="post-card">
+      <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, config.date_format) %></time>
+      <h2><a href="<%= url_for(post.path) %>"><%= post.title %></a></h2>
+      <% if (post.excerpt) { %>
+        <div class="excerpt"><%- post.excerpt %></div>
+      <% } %>
+      <a class="read-more" href="<%= url_for(post.path) %>">阅读全文</a>
+    </article>
+  <% }) %>
+</section>
