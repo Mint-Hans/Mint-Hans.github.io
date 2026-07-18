@@ -2,3 +2,18 @@ menu:
   首页: /
   归档: /archives/
   关于: /about/
+
+# Giscus 评论区
+giscus:
+  enable: true
+  repo: Mint-Hans/Mint-Hans.github.io
+  repo_id: R_kgDOTZUCUw
+  category: Announcements
+  category_id: DIC_kwDOTZUCU84DBcoq
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: bottom
+  theme: preferred_color_scheme
+  lang: zh-CN
