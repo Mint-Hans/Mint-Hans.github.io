@@ -1,31 +1,36 @@
 {
   "name": "study-blog",
-  "version": "1.0.0",
-  "description": "A Hexo blog for recording learning notes and game development progress.",
-  "scripts": {
-    "clean": "hexo clean",
-    "build": "hexo generate",
-    "server": "hexo server",
-    "deploy": "hexo clean && hexo generate && hexo deploy",
-    "new": "hexo new"
-  },
-  "keywords": [],
-  "author": "",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "学习日志：游戏开发、计算机基础与 AI 工具实践。",
+  "author": "Mint",
   "license": "MIT",
-  "type": "commonjs",
-  "hexo": {
-    "version": "8.1.2"
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "server": "astro dev --host 127.0.0.1",
+    "check": "astro check",
+    "build": "astro build && node scripts/finalize-build.mjs && pagefind --site dist",
+    "preview": "astro preview --host 127.0.0.1",
+    "new": "node scripts/new-post.mjs"
   },
   "dependencies": {
-    "hexo": "^8.1.2",
-    "hexo-cli": "^4.3.2",
-    "hexo-deployer-git": "^4.0.0",
-    "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-category": "^2.0.0",
-    "hexo-generator-index": "^4.0.0",
-    "hexo-generator-tag": "^2.0.0",
-    "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^7.0.1",
-    "hexo-server": "^3.0.0"
+    "shirones": "0.1.5",
+    "pagefind": "1.5.2",
+    "yaml": "^2.9.1",
+    "astro": "^7.3.5",
+    "svelte": "^5.57.1",
+    "@astrojs/svelte": "^9.0.1",
+    "sharp": "^0.35.4",
+    "@iconify-json/material-symbols": "^1.2.93",
+    "@iconify-json/fa6-brands": "^1.2.6",
+    "@iconify-json/fa6-regular": "^1.2.4",
+    "@iconify-json/fa6-solid": "^1.2.4",
+    "@iconify-json/simple-icons": "^1.2.93",
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
   }
 }
