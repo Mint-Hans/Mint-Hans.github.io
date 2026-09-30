@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "学习日志：游戏开发、计算机基础与 AI 工具实践。",
+  "description": "Mint‘s Blog：游戏开发、计算机基础与 AI 工具实践。",
   "author": "Mint",
   "license": "MIT",
   "engines": {

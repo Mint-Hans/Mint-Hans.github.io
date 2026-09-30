@@ -12,7 +12,7 @@ import { withUserConfig } from "@/utils/config-overlay.ts";
 export const siteConfig: SiteConfig = withUserConfig("site", {
 	site: "https://Mint-Hans.github.io/",
 	base: "/",
-	title: "学习日志",
+	title: "Mint‘s Blog",
 	subtitle: "游戏开发 / 计算机基础 / AI 工具实践",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
@@ -70,7 +70,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		homeText: {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
-			title: "学习日志",
+			title: "Mint‘s Blog",
 			subtitle: ["记录学习，慢慢走向更好的游戏开发者。", "游戏开发 / 计算机基础 / AI 工具实践"],
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。

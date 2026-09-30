@@ -1,4 +1,4 @@
-# 学习日志
+# Mint‘s Blog
 
 基于 [Shirone](https://github.com/LyraVoid/Shirone) 的 Astro 静态博客，记录游戏开发、计算机基础与 AI 工具实践。
 
